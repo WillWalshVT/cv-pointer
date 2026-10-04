@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Class project proposal: problem statement, approach, and plans for experiments.">
+  <title>Project Proposal</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%231d3557'/%3E%3Cpath d='M10 7h12v18H10z' fill='white'/%3E%3Cpath d='M13 12h6M13 16h6M13 20h4' stroke='%231d3557' stroke-width='1.5'/%3E%3C/svg%3E">
+  <style>
+    * { box-sizing: border-box; }
+    html { color-scheme: light; }
+    body { margin: 0; background: #fff; color: #252b33; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 1rem; line-height: 1.8; }
+    main { max-width: 48rem; margin: 0 auto; padding: 4.5rem 1.5rem 5rem; }
+    header { padding-bottom: 2rem; border-bottom: 2px solid #1d3557; }
+    h1 { margin: 0; color: #1d3557; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.25rem, 6vw, 3rem); line-height: 1.2; font-weight: 400; }
+    section { padding: 2.5rem 0; }
+    section + section { border-top: 1px solid #e3e7ec; }
+    h2 { margin: 0 0 1rem; color: #1d3557; font-size: 1.35rem; font-weight: 600; line-height: 1.4; }
+    p { margin: 0; }
+    p + p { margin-top: 1rem; }
+    img, video { max-width: 100%; height: auto; }
+    @media (max-width: 36rem) { main { padding-top: 2.5rem; } section { padding: 2rem 0; } }
+    @media print { main { max-width: none; padding: 0; } section { break-inside: avoid; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header><h1>Project Proposal</h1></header>
+    <!-- Replace the placeholder paragraphs below with your proposal text. -->
+    <section aria-labelledby="problem-statement">
+      <h2 id="problem-statement">Problem Statement</h2>
+      <p>Pointing is a natural way to direct attention or action. Yet, most computer interfaces require that intent to be expressed indirectly by dragging a mouse or trackpad. We propose a system that turns a smartphone or webcam into a direct pointing device. The camera’s aim is translated to a location on the screen, and the cursor position is updated accordingly. This system may be used as a “digital laser pointer” for presentations, as a controller for playing games, or as a general input device for direct cursor control.</p>
+    </section>
+    <section aria-labelledby="approach">
+      <h2 id="approach">Approach</h2>
+      <p>We will have a host computer and a connected smartphone paired together via a scanned QR code. The smartphone’s camera will view and detect the computer screen, as well as its relative position from the screen. Based on this relative positioning, the detected screen would be mapped to a flat perspective, and the center of the camera view would be mapped to a coordinate system on this flat screen. The camera device then sends the coordinates back to the computer and moves the cursor to the new coordinates. 
+For our stretch goal scenarios with multiple screens, we may have to investigate saving the relative position of multiple screens or displaying a small reference image on each screen to differentiate between monitors. 
+</p>
+    </section>
+    <section aria-labelledby="experiments">
+      <h2 id="experiments">Plans for Experiments</h2>
+      <p>We plan on thoroughly testing the pointer system in multiple scenarios, including normal flat monitors, widescreen monitors, and curved ultrawide monitors. These different screen types will test our detected perspective implementation, mapping large, curved faces to a flat grid system. The communication between the computer and the camera device will also need to be tested to ensure that bandwidth issues don’t cause enough delay in the system to limit usability. We want to include multiple-monitor setups as an initial stretch goal, which would require testing different orientations of monitors, and mixing monitor types. </p>
+    </section>
+  </main>
+</body>
+</html>
